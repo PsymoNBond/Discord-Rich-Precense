@@ -6,6 +6,7 @@ using DiscordRPC;
 using Timer = System.Windows.Forms.Timer;
 using System.Drawing;
 using System.Runtime.InteropServices;
+using System.Diagnostics;
 
 namespace DRP
 {
@@ -84,7 +85,7 @@ namespace DRP
 			}
             else
             {
-                DialogResult warningMessageBox = MessageBox.Show("Please Field Text Boxes:\n[Details] [State] [ClientID]", "Warning", MessageBoxButtons.OK);
+               MessageBox.Show("Please Field Text Boxes:\n[Details] [State] [ClientID]", "Warning", MessageBoxButtons.OK);
                 Application.Restart();
             }
         }
@@ -119,7 +120,14 @@ namespace DRP
 
         private void minimizeBtn_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+			//this.WindowState = FormWindowState.Minimized;
+
+			notifyIcon1.Visible = true;
+			notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+			notifyIcon1.BalloonTipText = "Работаю в фоновом режиме.";
+			notifyIcon1.BalloonTipTitle = "Discord Rich Presence";
+			notifyIcon1.ShowBalloonTip(10);
+			Visible = false;
         }
 
         private void isEndCB_CheckedChanged(object sender, EventArgs e)
@@ -198,5 +206,52 @@ namespace DRP
 			endTimeTB.Text = data.EndTime;
 			isEndCB.Checked = data.isEnd;
 		}
-    }
+
+		private void button1_Click_2(object sender, EventArgs e)
+		{
+			Process.Start("https://discord.com/developers/applications");
+		}
+
+		private void notifyIcon1_Click(object sender, EventArgs e)
+		{
+			Visible = true;
+		}
+
+		private void launchToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			initClient();
+			if (isEndCB.Checked)
+			{
+				Timer timer = new Timer();
+				timer.Interval = (1000);
+				timer.Tick += new EventHandler(timer_Tick);
+				timer.Start();
+			}
+			initBtn.Enabled = false;
+		}
+
+		private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+		{
+			switch (e.Button)
+			{
+				case MouseButtons.Left:
+					Visible = true;
+					break;
+				case MouseButtons.Right:
+					contextMenuStrip1.Show();
+					break;
+
+			}
+		}
+
+		private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		private void showWindowToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Visible = true;
+		}
+	}
 }

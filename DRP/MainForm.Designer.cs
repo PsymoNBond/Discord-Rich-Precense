@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
 			this.initBtn = new System.Windows.Forms.Button();
 			this.DetailsTB = new System.Windows.Forms.TextBox();
@@ -57,7 +58,14 @@
 			this.loadCfgBtn = new System.Windows.Forms.Button();
 			this.IFLbl = new System.Windows.Forms.Label();
 			this.userdispname = new System.Windows.Forms.Label();
+			this.button1 = new System.Windows.Forms.Button();
+			this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.launchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.showWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
+			this.contextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// initBtn
@@ -237,11 +245,54 @@
 			this.userdispname.ForeColor = System.Drawing.SystemColors.Control;
 			this.userdispname.Name = "userdispname";
 			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.Transparent;
+			resources.ApplyResources(this.button1, "button1");
+			this.button1.Name = "button1";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click_2);
+			// 
+			// notifyIcon1
+			// 
+			this.notifyIcon1.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+			this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
+			resources.ApplyResources(this.notifyIcon1, "notifyIcon1");
+			this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.launchToolStripMenuItem,
+            this.showWindowToolStripMenuItem,
+            this.quitToolStripMenuItem});
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+			// 
+			// launchToolStripMenuItem
+			// 
+			this.launchToolStripMenuItem.Name = "launchToolStripMenuItem";
+			resources.ApplyResources(this.launchToolStripMenuItem, "launchToolStripMenuItem");
+			this.launchToolStripMenuItem.Click += new System.EventHandler(this.launchToolStripMenuItem_Click);
+			// 
+			// showWindowToolStripMenuItem
+			// 
+			this.showWindowToolStripMenuItem.Name = "showWindowToolStripMenuItem";
+			resources.ApplyResources(this.showWindowToolStripMenuItem, "showWindowToolStripMenuItem");
+			this.showWindowToolStripMenuItem.Click += new System.EventHandler(this.showWindowToolStripMenuItem_Click);
+			// 
+			// quitToolStripMenuItem
+			// 
+			this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+			resources.ApplyResources(this.quitToolStripMenuItem, "quitToolStripMenuItem");
+			this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+			// 
 			// mainForm
 			// 
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.userdispname);
 			this.Controls.Add(this.loadCfgBtn);
 			this.Controls.Add(this.saveCfgBtn);
@@ -277,6 +328,7 @@
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainForm_MouseDown);
 			((System.ComponentModel.ISupportInitialize)(this.icon)).EndInit();
+			this.contextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -312,6 +364,12 @@
         private System.Windows.Forms.Button loadCfgBtn;
 		private System.Windows.Forms.Label IFLbl;
 		private System.Windows.Forms.Label userdispname;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.NotifyIcon notifyIcon1;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem launchToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem showWindowToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
 	}
 }
 
