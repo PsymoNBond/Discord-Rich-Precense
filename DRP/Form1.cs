@@ -14,10 +14,13 @@ namespace DRP
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
 
-        [DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-        [DllImportAttribute("user32.dll")]
-        public static extern bool ReleaseCapture();
+		DiscordRpcClient client;
+		RichPresence presence;
+
+        [DllImport("user32.dll")]
+        static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        static extern bool ReleaseCapture();
 
         public mainForm()
         {
@@ -28,52 +31,57 @@ namespace DRP
         {
             if (DetailsTB.Text != "" && StateLbl.Text != "" && clientIDTB.Text != "")
             {
-                if (!isEndCB.Checked)
-                {
-                    RichPresence presence = new RichPresence()
-                    {
-                        Details = DetailsTB.Text,
-                        State = StateTB.Text,
-                        Timestamps = new Timestamps()
-                        {
-                            Start = DateTime.UtcNow
-                        },
-                        Assets = new Assets()
-                        {
-                            LargeImageKey = largeImageKeyTB.Text,
-                            SmallImageKey = smallImageKeyTB.Text,
-                            LargeImageText = largeImageTextTB.Text,
-                            SmallImageText = smallImageTextTB.Text
-                        }
-                    };
-                    DiscordRpcClient client = new DiscordRpcClient(clientIDTB.Text);
-                    client.Initialize();
-                    client.SetPresence(presence);
-                }
-                else
-                {
-                    RichPresence presence = new RichPresence()
-                    {
-                        Details = DetailsTB.Text,
-                        State = StateTB.Text,
-                        Timestamps = new Timestamps()
-                        {
-                            Start = DateTime.UtcNow,
-                            End = DateTime.UtcNow + TimeSpan.FromSeconds(Convert.ToDouble(endTimeTB.Text))
-                        },
-                        Assets = new Assets()
-                        {
-                            LargeImageKey = largeImageKeyTB.Text,
-                            SmallImageKey = smallImageKeyTB.Text,
-                            LargeImageText = largeImageTextTB.Text,
-                            SmallImageText = smallImageTextTB.Text
-                        }
-                    };
-                    DiscordRpcClient client = new DiscordRpcClient(clientIDTB.Text);
-                    client.Initialize();
-                    client.SetPresence(presence);
-                }
-            }
+
+				client = new DiscordRpcClient(clientIDTB.Text);
+				if (client.Initialize())
+				{
+
+					if (!isEndCB.Checked)
+					{
+						presence = new RichPresence()
+						{
+							Details = DetailsTB.Text,
+							State = StateTB.Text,
+							Timestamps = new Timestamps()
+							{
+								Start = DateTime.UtcNow
+							},
+							Assets = new Assets()
+							{
+								LargeImageKey = largeImageKeyTB.Text,
+								SmallImageKey = smallImageKeyTB.Text,
+								LargeImageText = largeImageTextTB.Text,
+								SmallImageText = smallImageTextTB.Text
+							}
+						};
+
+					}
+					else
+					{
+						presence = new RichPresence()
+						{
+							Details = DetailsTB.Text,
+							State = StateTB.Text,
+							Timestamps = new Timestamps()
+							{
+								Start = DateTime.UtcNow,
+								End = DateTime.UtcNow + TimeSpan.FromSeconds(Convert.ToDouble(endTimeTB.Text))
+							},
+							Assets = new Assets()
+							{
+								LargeImageKey = largeImageKeyTB.Text,
+								SmallImageKey = smallImageKeyTB.Text,
+								LargeImageText = largeImageTextTB.Text,
+								SmallImageText = smallImageTextTB.Text
+							}
+						};
+					}
+
+					client.SetPresence(presence);
+				} else
+					MessageBox.Show("Could not init discrod rpc");
+
+			}
             else
             {
                 DialogResult warningMessageBox = MessageBox.Show("Please Field Text Boxes:\n[Details] [State] [ClientID]", "Warning", MessageBoxButtons.OK);
@@ -83,13 +91,13 @@ namespace DRP
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
+			LoadConfig();
+		}
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            
-        }
+			userdispname.Text = client.CurrentUser.Username;
+		}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -151,20 +159,7 @@ namespace DRP
 
         public void loadCfgBtn_Click(object sender, EventArgs e)
         {
-            UserData data = new UserData();
-            StreamReader file = File.OpenText("Config.json");
-            JsonSerializer serializer = new JsonSerializer();
-            data = (UserData)serializer.Deserialize(file, typeof(UserData));
-
-            DetailsTB.Text = data.Details;
-            StateTB.Text = data.State;
-            largeImageKeyTB.Text = data.LargeImageKey;
-            smallImageKeyTB.Text = data.SmallImageKey;
-            largeImageTextTB.Text = data.LargeImageText;
-            smallImageTextTB.Text = data.SmallImageText;
-            clientIDTB.Text = data.ClientID;
-            endTimeTB.Text = data.EndTime;
-            isEndCB.Checked = data.isEnd;
+			LoadConfig();
         }
 
         private void endTimeTB_KeyPress(object sender, KeyPressEventArgs e)
@@ -185,5 +180,23 @@ namespace DRP
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+		void LoadConfig()
+		{
+			UserData data = new UserData();
+			StreamReader file = File.OpenText("Config.json");
+			JsonSerializer serializer = new JsonSerializer();
+			data = (UserData)serializer.Deserialize(file, typeof(UserData));
+			file.Close();
+			DetailsTB.Text = data.Details;
+			StateTB.Text = data.State;
+			largeImageKeyTB.Text = data.LargeImageKey;
+			smallImageKeyTB.Text = data.SmallImageKey;
+			largeImageTextTB.Text = data.LargeImageText;
+			smallImageTextTB.Text = data.SmallImageText;
+			clientIDTB.Text = data.ClientID;
+			endTimeTB.Text = data.EndTime;
+			isEndCB.Checked = data.isEnd;
+		}
     }
 }

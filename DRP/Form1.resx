@@ -123,7 +123,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="initBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>697, 265</value>
+    <value>608, 265</value>
   </data>
   <data name="initBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -145,7 +145,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;initBtn.ZOrder" xml:space="preserve">
-    <value>26</value>
+    <value>27</value>
   </data>
   <data name="DetailsTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 115</value>
@@ -166,7 +166,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DetailsTB.ZOrder" xml:space="preserve">
-    <value>25</value>
+    <value>26</value>
   </data>
   <data name="DetailLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -196,7 +196,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;DetailLbl.ZOrder" xml:space="preserve">
-    <value>24</value>
+    <value>25</value>
   </data>
   <data name="StateLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -229,7 +229,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;StateLbl.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>23</value>
   </data>
   <data name="StateTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 115</value>
@@ -250,7 +250,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;StateTB.ZOrder" xml:space="preserve">
-    <value>23</value>
+    <value>24</value>
   </data>
   <data name="endTimeLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -283,7 +283,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;endTimeLbl.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="endTimeTB.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -310,7 +310,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;endTimeTB.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>22</value>
   </data>
   <data name="isEndCB.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -319,7 +319,7 @@
     <value>Flat</value>
   </data>
   <data name="isEndCB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>529, 116</value>
+    <value>523, 116</value>
   </data>
   <data name="isEndCB.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 17</value>
@@ -340,7 +340,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;isEndCB.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="exitBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -349,7 +349,7 @@
     <value>NoControl</value>
   </data>
   <data name="exitBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>748, 22</value>
+    <value>662, 22</value>
   </data>
   <data name="exitBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -370,7 +370,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;exitBtn.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="minimizeBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -379,7 +379,7 @@
     <value>NoControl</value>
   </data>
   <data name="minimizeBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>718, 22</value>
+    <value>632, 22</value>
   </data>
   <data name="minimizeBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
@@ -400,7 +400,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;minimizeBtn.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="smallImageKeyLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -433,7 +433,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;smallImageKeyLbl.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="smallImageKeyTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 175</value>
@@ -454,7 +454,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;smallImageKeyTB.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="largeImageKeyLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -487,7 +487,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;largeImageKeyLbl.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="largeImageKeyTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 175</value>
@@ -508,7 +508,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;largeImageKeyTB.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="clientIDLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -541,7 +541,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;clientIDLbl.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="clientIDTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>382, 175</value>
@@ -562,7 +562,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;clientIDTB.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="smallImageTextLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -595,7 +595,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;smallImageTextLbl.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="smallImageTextTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>197, 238</value>
@@ -616,7 +616,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;smallImageTextTB.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="largeImageTextLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -649,7 +649,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;largeImageTextLbl.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="largeImageTextTB.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 238</value>
@@ -670,7 +670,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;largeImageTextTB.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="mainTextLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -703,40 +703,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;mainTextLbl.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="IFLbl.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="IFLbl.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 8.25pt</value>
-  </data>
-  <data name="IFLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="IFLbl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>83, 47</value>
-  </data>
-  <data name="IFLbl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 13</value>
-  </data>
-  <data name="IFLbl.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="IFLbl.Text" xml:space="preserve">
-    <value>BY IceFox &amp;&amp; Lachee</value>
-  </data>
-  <data name="&gt;&gt;IFLbl.Name" xml:space="preserve">
-    <value>IFLbl</value>
-  </data>
-  <data name="&gt;&gt;IFLbl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IFLbl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;IFLbl.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="ErrorLogLbl.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -763,7 +730,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;ErrorLogLbl.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="icon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -826,7 +793,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;icon.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="restartBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -835,7 +802,7 @@
     <value>NoControl</value>
   </data>
   <data name="restartBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>697, 235</value>
+    <value>608, 235</value>
   </data>
   <data name="restartBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -856,7 +823,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;restartBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="saveCfgBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -865,7 +832,7 @@
     <value>NoControl</value>
   </data>
   <data name="saveCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 235</value>
+    <value>527, 235</value>
   </data>
   <data name="saveCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -886,7 +853,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;saveCfgBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="loadCfgBtn.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -895,7 +862,7 @@
     <value>NoControl</value>
   </data>
   <data name="loadCfgBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>616, 264</value>
+    <value>527, 264</value>
   </data>
   <data name="loadCfgBtn.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -916,19 +883,79 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;loadCfgBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="IFLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="IFLbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="IFLbl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="IFLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>83, 47</value>
+  </data>
+  <data name="IFLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 13</value>
+  </data>
+  <data name="IFLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="IFLbl.Text" xml:space="preserve">
+    <value>BY IceFox &amp;&amp; Lachee</value>
+  </data>
+  <data name="&gt;&gt;IFLbl.Name" xml:space="preserve">
+    <value>IFLbl</value>
+  </data>
+  <data name="&gt;&gt;IFLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IFLbl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;IFLbl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="userdispname.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userdispname.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt</value>
+  </data>
+  <data name="userdispname.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="userdispname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>395, 235</value>
+  </data>
+  <data name="userdispname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 13</value>
+  </data>
+  <data name="userdispname.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;userdispname.Name" xml:space="preserve">
+    <value>userdispname</value>
+  </data>
+  <data name="&gt;&gt;userdispname.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userdispname.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;userdispname.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>800, 300</value>
+    <value>698, 300</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
